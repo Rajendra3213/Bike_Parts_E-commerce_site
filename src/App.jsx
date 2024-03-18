@@ -1,38 +1,21 @@
 // import React from 'react';
-import './index.css'
-import Carousel from './Pages/Home/carousal'; // Import the Carousel component from its file
-import Navbar from './components/Common/navbar'; // Import the Navbar component from its file
-import Footer from './components/Common/footer';
-
-import CompanyOverview from './components/Common/client_satisfaction';
-import Testimonial from './components/Common/testimonials';
-import ServicePricing from './components/Common/service';
-import BestSellingList from './components/Common/Best_selling';
-import TrendingProduct from './components/Common/TrendingProduct'
-
-
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Common/navbar';
+import Home from './Pages/home';
+import Shop from './Pages/Shop';
+import About from './Pages/about';
 function App() {
   return (
-    <>
-      <Navbar />
-      <Carousel />
-      <BestSellingList />
-      <TrendingProduct />
-      <CompanyOverview />
-      <ServicePricing />
-      <Testimonial />
-
-      <Footer />
-
-
-
-
-      {/* <Footer1 />
-      <Footer2 /> */}
-
-
-    </>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

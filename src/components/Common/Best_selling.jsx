@@ -80,11 +80,28 @@ export default function BestSellingList() {
                     <h2 className="pb-5 text-2xl font-semibold">Best Selling</h2>
                     {/* Category options */}
                     <div className="flex flex-wrap justify-center space-x-4 mb-6">
-                        <button className={`border border-black bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'All' ? 'border-none bg-gray-600 text-white' : ''}`} onClick={() => { setSelectedCategory('All'); filterProducts('All'); }}>All</button>
-                        <button className={`border border-black bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'Chain' ? 'border-none bg-gray-600 text-white' : ''}`} onClick={() => { setSelectedCategory('Chain'); filterProducts('Chain'); }}>Chain</button>
-                        <button className={`border border-black bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'Pedals' ? 'border-none bg-gray-600 text-white' : ''}`} onClick={() => { setSelectedCategory('Pedals'); filterProducts('Pedals'); }}>Pedals</button>
+                        <button
+                            className={`border border-black bg-white text-black font-regular py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'All' ? 'bg-zinc-800 border border-none text-white blue ' : ''}`}
+                            onClick={() => { setSelectedCategory('All'); filterProducts('All'); }}
+                        >
+                            All
+                        </button>
+                        <button
+                            className={`border border-black bg-white text-black font-regular py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'Chain' ? 'border border-none text-white blue bg-zinc-800' : ''}`}
+                            onClick={() => { setSelectedCategory('Chain'); filterProducts('Chain'); }}
+                        >
+                            Chain
+                        </button>
+                        <button
+                            className={`border border-black bg-white text-black font-regular py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 ${selectedCategory === 'Pedals' ? 'border border-none text-white blue bg-zinc-800' : ''}`}
+                            onClick={() => { setSelectedCategory('Pedals'); filterProducts('Pedals'); }}
+                        >
+                            Pedals
+                        </button>
                         {/* Add more buttons for other categories as needed */}
                     </div>
+
+
 
                     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                         {products.map((product) => (

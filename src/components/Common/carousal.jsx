@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import image from '/Users/rajendraacharya/Desktop/E-commerce/E_commerce/src/assets/Bike.png';
+import image from '/Users/rajendraacharya/Desktop/E_commerce/Bike_Parts_E-commerce_site/src/assets/Bike.png';
 
 function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
