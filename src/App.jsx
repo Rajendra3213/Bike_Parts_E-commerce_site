@@ -1,21 +1,34 @@
-// import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Common/navbar';
-import Home from './Pages/home';
-import Shop from './Pages/Shop';
-import About from './Pages/about';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Common/navbar'
+import Footer from './components/Common/footer';
+import Home from './Pages/Home/home';
+import Shop from './Pages/Shop/shop';
+import About from './Pages/about/about';
+import Category from './Pages/Category/category';
+import BikeProduct from './Pages/OnClickPages/product_details';
+
+
 function App() {
   return (
-    <Router>
-      <div>
+    <>
+      <Router>
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </div>
-    </Router>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/shop' element={<Shop />} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/category' element={<Category />} />
+          <Route exact path='/product_list/' element={<BikeProduct/>} />
+        </Routes>
+        <Footer />
+
+      </Router>
+
+
+
+
+    </>
+
   );
 }
 

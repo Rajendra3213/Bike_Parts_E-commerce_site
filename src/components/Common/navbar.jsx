@@ -1,22 +1,33 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ShoppingCartIcon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import logoImage from '/Users/rajendraacharya/Desktop/E_commerce/Bike_Parts_E-commerce_site/src/assets/logo.png'
+import { useState } from 'react';
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ShoppingCartIcon } from '@heroicons/react/24/solid';
+import logoImage from '/Users/rajendraacharya/Desktop/E_commerce/Bike_Parts_E-commerce_site/src/assets/logo.png';
 
 const navigation = [
-  { name: 'Home', href: '/', current: true }, // Update href to appropriate route path
-  { name: 'Shop', href: '/shop', current: false }, // Update href to appropriate route path
-  { name: 'About Us', href: '/about', current: false }, // Update href to appropriate route path
-  { name: 'Category', href: '/category', current: false }, // Update href to appropriate route path
-]
+  { name: 'Home', href: '/', current: false },
+  { name: 'Shop', href: '/shop', current: false },
+  { name: 'About Us', href: '/about', current: false },
+  { name: 'Category', href: '/category', current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
+  const [navigationItems, setNavigationItems] = useState(navigation);
+
+  const handleClick = (index) => {
+    const updatedNavigation = navigationItems.map((item, i) => ({
+      ...item,
+      current: i === index,
+    }));
+    setNavigationItems(updatedNavigation);
+  };
+
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
@@ -44,15 +55,16 @@ export default function Navbar() {
                 </div>
                 <div className="ml-6 hidden sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigationItems.map((item, index) => (
                       <Link
                         key={item.name}
-                        to={item.href} // Update to prop to the appropriate route path
+                        to={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
+                        onClick={() => handleClick(index)}
                       >
                         {item.name}
                       </Link>
@@ -138,23 +150,24 @@ export default function Navbar() {
           </div>
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <Link
+              {navigationItems.map((item, index) => (
+                <a
                   key={item.name}
-                  to={item.href} // Update to prop to the appropriate route path
+                  href={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
+                  onClick={() => handleClick(index)}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
-  )
+  );
 }

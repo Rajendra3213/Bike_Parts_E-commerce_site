@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const initialProducts = [
     {
         id: 1,
         name: 'Pedals',
-        href: '#',
+        href: '/product_list/1',
         price: 'Rs 480',
         imageSrc: 'https://www.aduibrake.com/upload-files/design/application/Motorcycle/Sport-Aggressive-Version.png',
         imageAlt: 'Chain',
@@ -106,13 +107,13 @@ export default function BestSellingList() {
                     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                         {products.map((product) => (
                             <div key={product.id} className="bg-gray-100 rounded-lg overflow-hidden p-3">
-                                <a href={product.href} className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 block relative">
+                                <Link to={product.href} className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 block relative">
                                     <img
                                         src={product.imageSrc}
                                         alt={product.imageAlt}
                                         className="h-full w-full object-cover object-center group-hover:opacity-75"
                                     />
-                                </a>
+                                </Link>
                                 <div className="mt-4">
                                     <h3 className="text-sm text-gray-700">{product.name}</h3>
                                     <p className="text-xs text-gray-500">{product.description}</p>

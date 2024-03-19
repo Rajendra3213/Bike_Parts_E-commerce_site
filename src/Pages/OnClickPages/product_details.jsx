@@ -1,5 +1,4 @@
 // import React from 'react';
-
 function BikeProduct() {
   return (
     <section className="py-12 sm:py-16">
