@@ -6,8 +6,6 @@ import Shop from './Pages/Shop/shop';
 import About from './Pages/about/about';
 import Category from './Pages/Category/category';
 import BikeProduct from './Pages/OnClickPages/product_details';
-
-
 function App() {
   return (
     <>
@@ -18,15 +16,10 @@ function App() {
           <Route exact path='/shop' element={<Shop />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/category' element={<Category />} />
-          <Route exact path='/product_list/' element={<BikeProduct/>} />
+          <Route exact path='/product_list/1' element={<BikeProduct />} />
         </Routes>
         <Footer />
-
       </Router>
-
-
-
-
     </>
 
   );

@@ -119,7 +119,7 @@ export default function BestSellingList() {
                                     <p className="text-xs text-gray-500">{product.description}</p>
                                     <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
                                     <div className="mt-4 flex items-center">
-                                        <button className="bg-red-500 hover:bg-red-600 text-xs text-white font-size font-regular py-2 px-4 rounded-lg mr-2">Buy</button>
+                                        {/* <button className="bg-red-500 hover:bg-red-600 text-xs text-white font-size font-regular py-2 px-4 rounded-lg mr-2">Buy</button> */}
                                         <button className="border border-black text-black text-xs font-regular py-2 px-4 rounded-lg">Add to Cart</button>
                                     </div>
                                 </div>

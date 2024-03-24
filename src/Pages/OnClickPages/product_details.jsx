@@ -1,5 +1,12 @@
 // import React from 'react';
+import { useState } from "react";
 function BikeProduct() {
+  const [selectedImage, setSelectedImage] = useState('https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp'); // Default image URL
+
+  const handleImageClick = (imageUrl) => {
+    setSelectedImage(imageUrl);
+  };
+
   return (
     <section className="py-12 sm:py-16">
       <div className="container mx-auto px-4">
@@ -24,7 +31,7 @@ function BikeProduct() {
               <div className="flex items-center">
                 <span className="mx-2 text-gray-400">/</span>
                 <div className="-m-1">
-                  <a href="#" className="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800" aria-current="page"> Coffee </a>
+                  <a href="#" className="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800" aria-current="page"> Parts </a>
                 </div>
               </div>
             </li>
@@ -36,20 +43,25 @@ function BikeProduct() {
             <div className="lg:flex lg:items-start">
               <div className="lg:order-2 lg:ml-5">
                 <div className="max-w-xl overflow-hidden rounded-lg">
-                  <img className="h-full w-full max-w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                  <img className="h-full w-full max-w-full object-cover" src={selectedImage} alt="" />
                 </div>
               </div>
 
               <div className="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
                 <div className="flex flex-row items-start lg:flex-col">
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center">
-                    <img className="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden text-center" onClick={() => handleImageClick("https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp")}>
+                    <img className="h-full w-full object-cover" src="https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp" alt="" />
                   </button>
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img className="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-center" onClick={() => handleImageClick("https://down-ph.img.susercontent.com/file/e59b7fd4f1b5269a8d03edee39d4aabe")}>
+                    <img className="h-full w-full object-cover" src="https://down-ph.img.susercontent.com/file/e59b7fd4f1b5269a8d03edee39d4aabe" alt="" />
                   </button>
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img className="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
+                    onClick={() => handleImageClick("https://tiimg.tistatic.com/fp/1/004/071/brake-pads-578.jpg")}>
+                    <img className="h-full w-full object-cover" src="https://tiimg.tistatic.com/fp/1/004/071/brake-pads-578.jpg" alt="" />
+                  </button>
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
+                    onClick={() => handleImageClick("https://i5.walmartimages.com/seo/Polaris-2200464-Rear-Breakpad-93-99-Sportsman-Scrambler-500-425-400-350-300_a8014b93-964a-4e6f-a154-dad059fe22a2_1.2e6be1051334763c50b4fee4e3e7059e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF")} >
+                    <img className="h-full w-full object-cover" src="https://i5.walmartimages.com/seo/Polaris-2200464-Rear-Breakpad-93-99-Sportsman-Scrambler-500-425-400-350-300_a8014b93-964a-4e6f-a154-dad059fe22a2_1.2e6be1051334763c50b4fee4e3e7059e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="" />
                   </button>
                 </div>
               </div>

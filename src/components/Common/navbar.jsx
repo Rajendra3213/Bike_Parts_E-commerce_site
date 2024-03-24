@@ -7,7 +7,7 @@ import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 import logoImage from '/Users/rajendraacharya/Desktop/E_commerce/Bike_Parts_E-commerce_site/src/assets/logo.png';
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
+  { name: 'Home', href: '/', current: true },
   { name: 'Shop', href: '/shop', current: false },
   { name: 'About Us', href: '/about', current: false },
   { name: 'Category', href: '/category', current: false },
