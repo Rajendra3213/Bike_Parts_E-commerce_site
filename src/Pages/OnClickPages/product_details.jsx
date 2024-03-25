@@ -49,17 +49,18 @@ function BikeProduct() {
 
               <div className="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
                 <div className="flex flex-row items-start lg:flex-col">
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden text-center" onClick={() => handleImageClick("https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp")}>
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-200 text-center rounded-sm border border-gray-300" onClick={() => handleImageClick("https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp")}>
                     <img className="h-full w-full object-cover" src="https://5.imimg.com/data5/SELLER/Default/2023/6/319692383/UU/TR/XD/160966362/break-pad-500x500.webp" alt="" />
                   </button>
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-center" onClick={() => handleImageClick("https://down-ph.img.susercontent.com/file/e59b7fd4f1b5269a8d03edee39d4aabe")}>
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-200 text-center rounded-sm border border-gray-300" onClick={() => handleImageClick("https://down-ph.img.susercontent.com/file/e59b7fd4f1b5269a8d03edee39d4aabe")}>
                     <img className="h-full w-full object-cover" src="https://down-ph.img.susercontent.com/file/e59b7fd4f1b5269a8d03edee39d4aabe" alt="" />
                   </button>
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
+
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-200 text-center rounded-sm border border-gray-300"
                     onClick={() => handleImageClick("https://tiimg.tistatic.com/fp/1/004/071/brake-pads-578.jpg")}>
                     <img className="h-full w-full object-cover" src="https://tiimg.tistatic.com/fp/1/004/071/brake-pads-578.jpg" alt="" />
                   </button>
-                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
+                  <button type="button" className="flex-0 aspect-square mb-3 h-20 overflow-hidden hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-200 text-center rounded-sm border border-gray-300"
                     onClick={() => handleImageClick("https://i5.walmartimages.com/seo/Polaris-2200464-Rear-Breakpad-93-99-Sportsman-Scrambler-500-425-400-350-300_a8014b93-964a-4e6f-a154-dad059fe22a2_1.2e6be1051334763c50b4fee4e3e7059e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF")} >
                     <img className="h-full w-full object-cover" src="https://i5.walmartimages.com/seo/Polaris-2200464-Rear-Breakpad-93-99-Sportsman-Scrambler-500-425-400-350-300_a8014b93-964a-4e6f-a154-dad059fe22a2_1.2e6be1051334763c50b4fee4e3e7059e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="" />
                   </button>
@@ -69,7 +70,7 @@ function BikeProduct() {
           </div>
 
           <div className="lg:col-span-2 lg:row-span-2 lg:row-end-2">
-            <h1 className="sm:text-2xl font-bold text-gray-900 sm:text-3xl">Afro-Brazillian Coffee</h1>
+            <h1 className="sm:text-2xl font-bold text-gray-900 sm:text-3xl">Yamaha Original Break Pad</h1>
 
             <div className="mt-5 flex items-center">
               <div className="flex items-center">
@@ -92,45 +93,27 @@ function BikeProduct() {
               <p className="ml-2 text-sm font-medium text-gray-500">1,209 Reviews</p>
             </div>
 
-            <h2 className="mt-8 text-base text-gray-900">Coffee Type</h2>
+            <h2 className="mt-8 text-base text-gray-900">Break Pad Types</h2>
             <div className="mt-3 flex select-none flex-wrap items-center gap-1">
               <label className="">
                 <input type="radio" name="type" value="Powder" className="peer sr-only" checked />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Powder</p>
+                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Both</p>
               </label>
               <label className="">
                 <input type="radio" name="type" value="Whole Bean" className="peer sr-only" />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Whole Bean</p>
+                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Front Pad</p>
               </label>
               <label className="">
                 <input type="radio" name="type" value="Ground" className="peer sr-only" />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Ground</p>
+                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">Back Pad</p>
               </label>
             </div>
 
-            <h2 className="mt-8 text-base text-gray-900">Choose subscription</h2>
-            <div className="mt-3 flex select-none flex-wrap items-center gap-1">
-              <label className="">
-                <input type="radio" name="subscription" value="4 Months" className="peer sr-only" />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">4 Months</p>
-                <span className="mt-1 block text-center text-xs">$80/mo</span>
-              </label>
-              <label className="">
-                <input type="radio" name="subscription" value="8 Months" className="peer sr-only" checked />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">8 Months</p>
-                <span className="mt-1 block text-center text-xs">$60/mo</span>
-              </label>
-              <label className="">
-                <input type="radio" name="subscription" value="12 Months" className="peer sr-only" />
-                <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">12 Months</p>
-                <span className="mt-1 block text-center text-xs">$40/mo</span>
-              </label>
-            </div>
+
 
             <div className="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
               <div className="flex items-end">
-                <h1 className="text-3xl font-bold">$60.50</h1>
-                <span className="text-base">/month</span>
+                <h1 className="text-3xl font-bold">Rs 600.50</h1>
               </div>
 
               <button type="button" className="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800">
@@ -173,7 +156,7 @@ function BikeProduct() {
             <div className="mt-8 flow-root sm:mt-12">
               <h1 className="text-3xl font-bold">Delivered To Your Door</h1>
               <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium nesciunt fuga.</p>
-              <h1 className="mt-8 text-3xl font-bold">From the Fine Farms of Brazil</h1>
+              <h1 className="mt-8 text-3xl font-bold">From the Bikers World most genuine Bike Parts providing company </h1>
               <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam enim facere.</p>
               <p className="mt-4">Amet consectetur adipisicing elit. Optio numquam enim facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore rerum nostrum eius facere, ad neque.</p>
             </div>

@@ -5,6 +5,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 import logoImage from '/Users/rajendraacharya/Desktop/E_commerce/Bike_Parts_E-commerce_site/src/assets/logo.png';
+import CartPage from '../../Pages/OnClickPages/cartpage';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -20,6 +21,9 @@ function classNames(...classes) {
 export default function Navbar() {
   const [navigationItems, setNavigationItems] = useState(navigation);
 
+ function goToCartPage(){
+     <CartPage/>
+ }
   const handleClick = (index) => {
     const updatedNavigation = navigationItems.map((item, i) => ({
       ...item,
@@ -83,6 +87,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 ml-2"
+                  onClick={goToCartPage}
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Cart</span>
